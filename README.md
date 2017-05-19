@@ -11,3 +11,8 @@ Set the classpath to the ClojureScript JAR:
 ```
 java -cp cljs.jar:src clojure.main build.clj
 ```
+
+Auto-build with:
+```
+java -cp cljs.jar:src clojure.main watch.clj
+```
