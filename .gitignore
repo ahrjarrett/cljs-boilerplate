@@ -1,3 +1,5 @@
-*.swp
 out/
 cljs.jar
+.repl-1.9.293
+
+*.swp
