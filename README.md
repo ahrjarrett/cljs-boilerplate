@@ -2,6 +2,13 @@ ClojureScript Boilerplate Project, using Leiningen and Figwheel.
 
 Intended to be simpler and less opinionated than [Chestnut](https://github.com/plexus/chestnut) or [Figwheel-Template](https://github.com/bhauman/figwheel-template) (even though Chestnut is technically for Clojure, not ClojureScript).
 
+**Note:** In order to interact w/ files in the REPL, you need to require the namespace, like so:
+
+```
+(require '[hello-world.core :as hello] :reload)
+```
+
+
 
 **To build:**
 

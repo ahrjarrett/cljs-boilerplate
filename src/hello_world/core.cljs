@@ -11,4 +11,11 @@
 
 (println "hello werld")
 
-;; Challenge: Make the browser alert box pop up.
+
+
+(defn add10 [n]
+  (+ 10 n))
+(defn add9 [n]
+  (+ 9 n))
+
+
