@@ -8,7 +8,44 @@ Intended to be simpler and less opinionated than [Chestnut](https://github.com/p
 (require '[hello-world.core :as hello] :reload)
 ```
 
+05/23/2017: Installed figwheel and using Lein. Run `lein compile` to compile to ClojureScript.
 
+Created a hook in project.clj so that...
+
+```
+lein compile
+```
+
+...is a hook for:
+
+```
+lein cljsbuild once
+```
+
+To run figwheel, just run:
+```
+rlwrap lein fighweel
+```
+
+And navigate to localhost:3449. Remember, rlwrap just wraps the REPL so you can do things like access command history, etc.
+
+For a production build run:
+```
+lein with-profile prod do clean, compile
+```
+
+**Also:** I've noticed that you still have to run the following command for Figwheel to"jack-in" to the REPL (otherwise you get console errors...also I think I might need to turn a verbose-mode on, because I'm not getting any console messages from Figwheel besides the path to the file it reloaded; most of the tutorials I'm going through get constant feedback from Figwheel, but maybe this changed with a recent patch or version?):
+```
+java -cp cljs.jar:src clojure.main repl.clj
+```
+
+(Then again, this might simply be because src/hello_world/core.cljs is telling it to connect.)
+
+
+
+
+
+[ Below: Deprecated ]
 
 **To build:**
 
