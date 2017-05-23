@@ -19,9 +19,13 @@
 
   ;; I suggest using profiles from the beginning
              ;; `dev` profile is known to lein and enabled by default
-  :profiles {:dev {:cljsbuild {:builds {:main {:figwheel true
+                   ;; binaryage and devtools not currently working?
+  :profiles {:dev {;;:dependences [[binaryage/devtools "0.9.4"]]
+                   :cljsbuild {:builds {:main {:figwheel true
                                                :compiler {:optimizations :none
                                                           :source-map true}}}}}
+                                                          ;; These are settings for devtools (see above)
+                                                          ;;:preloads [devtools.preload]
              ;; `prod` key is not known to lein and is arbitrary
              :prod {:cljsbuild {:builds {:main {:compiler {:optimizations :advanced
                                                            :pretty-print false}}}}}}
